@@ -12,7 +12,7 @@ export class PathResolveService implements Resolve<string | null> {
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
   ): string | null {
-    const typoPath = state.url;
+    const typoPath = state.url.replace('/', '');
     const threshold = this.getThreshold(typoPath);
     const dictionary = Object.values(paths)
       .filter(path => Math.abs(path.length - typoPath.length) < threshold);
@@ -25,7 +25,7 @@ export class PathResolveService implements Resolve<string | null> {
   }
 
   getThreshold(path: string): number {
-    if (path.length < 8) return 2;
+    if (path.length < 5) return 3;
 
     return 5;
   }
