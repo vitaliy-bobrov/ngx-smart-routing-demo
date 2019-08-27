@@ -1,0 +1,19 @@
+{
+  "hosting": [
+    {
+      "target": "ngx-smart-routing-demo",
+      "public": "dist/ngx-smart-routing-demo",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    }
+  ]
+}

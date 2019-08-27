@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "ngx-smart-routing-demo": {
+      "hosting": {
+        "ngx-smart-routing-demo": [
+          "ngx-smart-routing-demo"
+        ]
+      }
+    }
+  }
+}
